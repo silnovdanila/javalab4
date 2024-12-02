@@ -9,6 +9,12 @@ public class Dish {
         this.price = 0;
         this.name = "";
     }
+    public void setPrice(int a){
+        this.price = a;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
     public int getPrice() {
         return this.price;
     }
