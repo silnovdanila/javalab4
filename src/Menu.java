@@ -10,7 +10,15 @@ public class Menu {
         this.desserts = new ArrayList<>();
         this.drinks = new ArrayList<>();
     }
-
+    public int getHotDishesAmount(){
+        return this.hotDishes.size();
+    }
+    public int getDessertAmount(){
+        return this.desserts.size();
+    }
+    public int getDrinksAmount(){
+        return this.drinks.size();
+    }
     public Dish getHotDish(int index) {
         return this.hotDishes.get(index);
     }
