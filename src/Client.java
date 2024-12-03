@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Client {
-    private String name;
-    private DiscountCard card;
+    private final String name;
+    private final DiscountCard card;
     private Order currentOrder;
 
     public Client(int id, String name) {
@@ -12,7 +12,7 @@ public class Client {
     }
 
     public static Client getNewClient(int id) {
-        System.out.println("\nWelcome to the cafe\nPlease, enter your name - ");
+        System.out.print("\nWelcome to the cafe\nPlease, enter your name - ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         return new Client(id, name);
@@ -29,7 +29,6 @@ public class Client {
     public void payWithCard() {
         Scanner scanner = new Scanner(System.in);
         int sum;
-        System.out.print("Enter payment amount: ");
         sum = scanner.nextInt();
         System.out.println("\nThe payment was successful");
     }
@@ -43,7 +42,7 @@ public class Client {
     }
 
     public void addHistory() {
-        this.card.setDiscount(this.card.getNewDiscount(this.card.getDiscount()));
+        this.card.setDiscount(DiscountCard.getNewDiscount(this.card.getDiscount()));
         this.card.addToHistoryOfOrders(this.currentOrder);
     }
 }
