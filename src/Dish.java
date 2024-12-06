@@ -5,10 +5,6 @@ public class Dish {
         this.price = price;
         this.name = name;
     }
-    public Dish() {
-        this.price = 0;
-        this.name = "";
-    }
     public void setPrice(int a){
         this.price = a;
     }

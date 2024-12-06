@@ -1,16 +1,15 @@
 import java.util.ArrayList;
 
 public class DiscountCard {
-    private int id;
+    private static int id = 0;
     private double discount;
     private ArrayList<Order> historyOfOrders;
 
-    public DiscountCard(int id) {
-        this.id = id;
+    public DiscountCard() {
+        this.id++;
         this.discount = 0.0;
         this.historyOfOrders = new ArrayList<Order>();
     }
-
     public double getDiscount() {
         return this.discount;
     }

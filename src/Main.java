@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        int id = 0;
         Menu menu = new Menu();
         Dish hotdish1 = new Dish(1200, "Mashed potato");
         menu.addHotDish(hotdish1);
@@ -26,13 +25,13 @@ public class Main {
                 new Waiter("Maria", 45000, "Waiter")
         };
         ArrayList<Integer> order = new ArrayList<>();
-        Client client1 = Client.getNewClient(id++);
+        Client client1 = Client.getNewClient();
         getOrder(client1.getName(), waiters[0].getName(), chefs[0].getName(), menu, order);
         makeOrder(client1, waiters[1], chefs[1], menu, order);
         client1.payClient();
         client1.addHistory();
 
-        Client client2 = Client.getNewClient(id++);
+        Client client2 = Client.getNewClient();
         getOrder(client2.getName(), waiters[1].getName(), chefs[1].getName(), menu, order);
         makeOrder(client2, waiters[1], chefs[2], menu, order);
         client2.payClient();
@@ -72,7 +71,7 @@ public class Main {
                 }
             }
         } else {
-            System.out.println("Invalid number of dishes. Please enter a number upper than 0.");
+            System.out.println("Invalid number of dishes.");
         }
     }
 

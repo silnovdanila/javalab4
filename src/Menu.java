@@ -10,9 +10,7 @@ public class Menu {
         this.desserts = new ArrayList<>();
         this.drinks = new ArrayList<>();
     }
-    public int getHotDishesAmount(){
-        return this.hotDishes.size();
-    }
+    public int getHotDishesAmount(){ return this.hotDishes.size(); }
     public int getDessertAmount(){
         return this.desserts.size();
     }
@@ -22,23 +20,18 @@ public class Menu {
     public Dish getHotDish(int index) {
         return this.hotDishes.get(index);
     }
-
     public Dish getDessert(int index) {
         return this.desserts.get(index);
     }
-
     public Dish getDrink(int index) {
         return this.drinks.get(index);
     }
-
     public void addHotDish(Dish dish) {
         this.hotDishes.add(dish);
     }
-
     public void addDessert(Dish dish) {
         this.desserts.add(dish);
     }
-
     public void addDrink(Dish dish) {
         this.drinks.add(dish);
     }
