@@ -3,17 +3,63 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Menu menu = new Menu();
-        Dish hotdish1 = new Dish(1200, "Mashed potato");
-        menu.addHotDish(hotdish1);
-        Dish hotdish2 = new Dish(1100, "Sup");
-        menu.addHotDish(hotdish2);
-        Dish dessert1 = new Dish(700, "Cake");
-        menu.addDessert(dessert1);
-        Dish drink1 = new Dish(120, "Tea");
-        menu.addDrink(drink1);
-        menu.menuOut();
 
+
+        Waiter waiter1 = new Waiter("Anna", 45000, "Waiter");
+        WaiterDiscription wd = new WaiterDiscription();
+        WaiterMenu wm = new WaiterMenu();
+        waiter1.addMotion(wd);
+        waiter1.addMotion(wm);
+        System.out.println("\tWaiters");
+        waiter1.performAllMotions();
+        Chef povar1 = new Chef("Vasiliy", 60000, "Chef");
+        ChefDiscription cd = new ChefDiscription();
+        povar1.addMotion(cd);
+        System.out.println("\n\tChef\n");
+        povar1.performAllMotions();
+
+        /*
+        Menu menu = new Menu();
+        HotDish hotdish1 = new HotDish(1200, "Mashed potato", 500);
+        menu.addHotDish(hotdish1);
+        HotDish hotdish2 = new HotDish(1100, "Sup", 375);
+        menu.addHotDish(hotdish2);
+        Dessert dessert1 = new Dessert(700, "Cake", 250, 0);
+        menu.addDessert(dessert1);
+        Drink drink1 = new Drink(120, "Tea", 250, 0);
+        menu.addDrink(drink1);
+        Drink drink2 = new Drink(400, "Margarita", 300, 10);
+        menu.addDrink(drink2);
+        menu.menuOut();
+        System.out.println();
+
+        ArrayList<GetName> names = new ArrayList<>();
+        HotDish spagetti = new HotDish(1000, "Spagetti", 500);
+        names.add(spagetti);
+        Client client1 = Client.getNewClient();
+        names.add(client1);
+        Chef chef1 = new Chef("Vasiliy", 60000, "Chef");
+        names.add(chef1);
+        for (int i = 0; i < names.size(); i++){
+            System.out.println(names.get(i).getName());
+        }*/
+
+        /*
+        Menu menu1 = new Menu(menu);
+        HotDish spagetti = new HotDish(1000, "Spagetti", 500);
+        menu.addHotDish(spagetti);
+        System.out.println(menu1.getHotDish(2).getName());
+        */
+        /*
+        HotDish spagetti = new HotDish(1000, "Spagetti", 500);
+        Dish dish;
+        spagetti.notVirtualDescription();
+        dish = spagetti;
+        dish.getDescription();
+        spagetti.notVirtualDescription();
+        */
+
+        /*
         Chef[] chefs = {
                 new Chef("Vasiliy", 60000, "Chef"),
                 new Chef("Gregory", 45000, "Povar"),
@@ -41,7 +87,7 @@ public class Main {
         makeOrder(client1, waiters[1], chefs[2], menu, order);
         client1.payClient();
         client1.addHistory();
-
+        */
     }
 
 

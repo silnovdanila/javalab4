@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Client {
+public class Client implements GetName{
     private final String name;
     private final DiscountCard card;
     private Order currentOrder;
